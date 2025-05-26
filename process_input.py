@@ -7,16 +7,16 @@ def result_steps_html(x, y, z):
 
 #start respnse
     html_response = f"""
-    <h2>Python Script result result :  <h2>
-    <h3>Original values:</h3>
-    <ul>
-    <li>x : {x}</li>
-    <li>y : {y}</li>
-    <li>z : {z}</li>
-    </ul>
-    <ol>
-        <li><strong>Step 1:</strong> Initial value of x = {x}</li>
-    """
+        <h2>Python Script result result :  <h2>
+        <h3>Original values:</h3>
+        <ul>
+        <li>x : {x}</li>
+        <li>y : {y}</li>
+        <li>z : {z}</li>
+        </ul>
+        <ol>
+            <li><strong>Step 1:</strong> Initial value of x = {x}</li>
+        """
     #step 2
     x += y
     html_response.append(f"<li>After x += y: {x}</li>")
@@ -45,7 +45,7 @@ try :
     x = float(sys.argv[1])
     y = float(sys.argv[2])
     z = float(sys.argv[3])
-except ValueError:
+except (IndexError, ValueError):
     print("Error: Input must be a number.")
     sys.exit(1)
 
